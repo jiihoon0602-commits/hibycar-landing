@@ -11,7 +11,7 @@
     <meta property="og:image" content="./Hybicar-og.png" />
     <title>하이바이카 | 중고차·리스 맞춤 상담</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260902" />
     <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -129,7 +129,7 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
             <div class="form-head"><span>무료 상담 신청</span><strong><em>1분</em>이면 충분해요</strong></div>
             <div class="form-grid">
               <label class="field"><span>이름 <b>*</b></span><input type="text" name="name" autocomplete="name" placeholder="이름을 입력해 주세요" required maxlength="20" /><small class="error-message"></small></label>
-              <label class="field"><span>연락처 <b>*</b></span><input type="tel" name="phone" autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000" required maxlength="13" /><small class="error-message"></small></label>
+              <label class="field"><span>연락처 <b>*</b></span><input type="tel" name="phone" autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000" required minlength="13" maxlength="13" pattern="010-[0-9]{4}-[0-9]{4}" aria-describedby="phone-error" /><small class="error-message" id="phone-error" aria-live="polite"></small></label>
               <label class="field"><span>희망 차량</span><select name="vehicle"><option value="">아직 정하지 못했어요</option><option>그랜저</option><option>쏘나타</option><option>쏘렌토</option><option>캐스퍼</option><option>포터</option><option>기타 차량</option></select></label>
               <label class="field"><span>거주 지역</span><select name="region"><option value="">지역을 선택해 주세요</option><option>서울</option><option>경기</option><option>인천</option><option>부산</option><option>대구</option><option>광주</option><option>대전</option><option>울산</option><option>세종</option><option>강원</option><option>충북</option><option>충남</option><option>전북</option><option>전남</option><option>경북</option><option>경남</option><option>제주</option></select></label>
             </div>
@@ -163,6 +163,6 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
     </footer>
     <a class="mobile-sticky" href="#consult">무료 상담 신청 <span>→</span></a>
     <button class="to-top" type="button" aria-label="맨 위로 이동">↑</button>
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20260902"></script>
   </body>
 </html>

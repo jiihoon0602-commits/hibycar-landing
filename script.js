@@ -68,6 +68,24 @@
     return `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`;
   };
 
+  const fakePhoneNumbers = new Set([
+    "01000000000",
+    "01011111111",
+    "01012345678",
+    "01099999999"
+  ]);
+
+  function getPhoneError(digits) {
+    if (!digits) return "휴대전화 번호를 입력해 주세요.";
+    if (!digits.startsWith("010")) return "010으로 시작하는 휴대전화 번호를 입력해 주세요.";
+    if (digits.length !== 11) return "휴대전화 번호 11자리를 모두 입력해 주세요.";
+    const subscriberNumber = digits.slice(3);
+    if (fakePhoneNumbers.has(digits) || /^(\d)\1{7}$/.test(subscriberNumber)) {
+      return "실제로 연락 가능한 휴대전화 번호를 입력해 주세요.";
+    }
+    return "";
+  }
+
   function selectedDebtStatus() {
     return form.querySelector('[name="debt_status"]:checked')?.value || "";
   }
@@ -116,7 +134,8 @@
     eligibilityError.textContent = "";
     form.querySelector(".agreement-error").textContent = "";
     if (name.value.trim().length < 2) { setError(name, "이름을 2자 이상 입력해 주세요."); valid = false; }
-    if (!/^01[016789]\d{7,8}$/.test(digits)) { setError(phoneInput, "휴대전화 번호를 확인해 주세요."); valid = false; }
+    const phoneError = getPhoneError(digits);
+    if (phoneError) { setError(phoneInput, phoneError); valid = false; }
     if (!debtStatus) { eligibilityError.textContent = "예 또는 아니요를 선택해 주세요."; valid = false; }
     if (debtStatus === "예") { eligibilityBlock.hidden = false; submitButton.disabled = true; valid = false; }
     if (!privacyInput.checked) { form.querySelector(".agreement-error").textContent = "개인정보 수집 및 이용 동의가 필요합니다."; valid = false; }
