@@ -119,17 +119,18 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
             <h2 id="consult-title">내 조건에 맞는 차,<br />지금 편하게 물어보세요.</h2>
             <p>차량이 정해지지 않았어도 괜찮습니다. 아는 만큼만 입력해 주세요.</p>
             <div class="consult-promise">
-              <div><span>✓</span><p><strong>필수 정보만 간단하게</strong><small>이름·연락처·희망 조건만 받습니다.</small></p></div>
+              <div><span>✓</span><p><strong>필수 정보만 간단하게</strong><small>이름·연락처·생년월일·희망 조건만 받습니다.</small></p></div>
               <div><span>✓</span><p><strong>상담 비용 없이</strong><small>조건 확인과 상담은 무료입니다.</small></p></div>
               <div><span>✓</span><p><strong>무리한 진행 없이</strong><small>비교 후 원하는 경우에만 진행합니다.</small></p></div>
             </div>
           </div>
 
-          <form class="consult-form" id="lead-form" novalidate data-endpoint="https://hook.us2.make.com/ngxustw596wnb30s4f4y51jorxh2x9bm">
+          <form class="consult-form" id="lead-form" novalidate data-endpoint="">
             <div class="form-head"><span>무료 상담 신청</span><strong><em>1분</em>이면 충분해요</strong></div>
             <div class="form-grid">
               <label class="field"><span>이름 <b>*</b></span><input type="text" name="name" autocomplete="name" placeholder="이름을 입력해 주세요" required maxlength="20" /><small class="error-message"></small></label>
               <label class="field"><span>연락처 <b>*</b></span><input type="tel" name="phone" autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000" required minlength="13" maxlength="13" pattern="010-[0-9]{4}-[0-9]{4}" aria-describedby="phone-error" /><small class="error-message" id="phone-error" aria-live="polite"></small></label>
+              <label class="field"><span>생년월일 <b>*</b></span><input type="date" name="birth_date" autocomplete="bday" required aria-describedby="birth-date-error" /><small class="error-message" id="birth-date-error" aria-live="polite"></small></label>
               <label class="field"><span>희망 차량</span><select name="vehicle"><option value="">아직 정하지 못했어요</option><option>그랜저</option><option>쏘나타</option><option>쏘렌토</option><option>캐스퍼</option><option>포터</option><option>기타 차량</option></select></label>
               <label class="field"><span>거주 지역</span><select name="region"><option value="">지역을 선택해 주세요</option><option>서울</option><option>경기</option><option>인천</option><option>부산</option><option>대구</option><option>광주</option><option>대전</option><option>울산</option><option>세종</option><option>강원</option><option>충북</option><option>충남</option><option>전북</option><option>전남</option><option>경북</option><option>경남</option><option>제주</option></select></label>
             </div>
@@ -144,7 +145,7 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
             </fieldset>
             <div class="agreements">
               <label class="check-row"><input type="checkbox" name="privacy_agreed" required /><span class="custom-check" aria-hidden="true"></span><span><b>[필수]</b> 개인정보 수집 및 이용에 동의합니다.</span><button type="button" class="terms-toggle" aria-expanded="false" aria-controls="privacy-detail">보기</button></label>
-              <div class="terms-detail" id="privacy-detail" hidden><p><b>수집 항목</b> 이름, 연락처, 희망 차량, 거주 지역, 연체·채무 불이행 여부</p><p><b>이용 목적</b> 중고차·리스 상담, 차량 및 금융 조건 안내</p><p><b>보유 기간</b> 상담 종료 후 3개월 또는 관계 법령에 따른 기간</p><p>동의를 거부할 수 있으나, 거부 시 상담 신청이 제한됩니다.</p></div>
+              <div class="terms-detail" id="privacy-detail" hidden><p><b>수집 항목</b> 이름, 연락처, 생년월일, 희망 차량, 거주 지역, 연체·채무 불이행 여부</p><p><b>이용 목적</b> 중고차·리스 상담, 차량 및 금융 조건 안내</p><p><b>보유 기간</b> 상담 종료 후 3개월 또는 관계 법령에 따른 기간</p><p>동의를 거부할 수 있으나, 거부 시 상담 신청이 제한됩니다.</p></div>
               <small class="agreement-error" aria-live="polite"></small>
             </div>
             <button class="submit-button" type="submit"><span class="submit-label">무료 상담 신청하기</span><span class="submit-loading" hidden>접수 중…</span></button>
@@ -163,6 +164,6 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
     </footer>
     <a class="mobile-sticky" href="#consult">무료 상담 신청 <span>→</span></a>
     <button class="to-top" type="button" aria-label="맨 위로 이동">↑</button>
-    <script src="./script.js?v=20260902"></script>
+    <script src="./script.js?v=20260902-2"></script>
   </body>
 </html>

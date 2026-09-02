@@ -3,6 +3,7 @@
 
   const form = document.getElementById("lead-form");
   const phoneInput = form.querySelector('[name="phone"]');
+  const birthDateInput = form.querySelector('[name="birth_date"]');
   const privacyInput = form.querySelector('[name="privacy_agreed"]');
   const debtInputs = [...form.querySelectorAll('[name="debt_status"]')];
   const eligibilityError = form.querySelector(".eligibility-error");
@@ -14,8 +15,11 @@
   const mobileSticky = document.querySelector(".mobile-sticky");
   const toTop = document.querySelector(".to-top");
   const carousel = document.querySelector(".hero-carousel");
+  const now = new Date();
+  const localToday = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
 
   document.getElementById("year").textContent = new Date().getFullYear();
+  birthDateInput.max = localToday;
 
   if (carousel) {
     const track = carousel.querySelector(".carousel-track");
@@ -104,6 +108,7 @@
     phoneInput.value = formatPhone(phoneInput.value);
     clearError(phoneInput);
   });
+  birthDateInput.addEventListener("change", () => clearError(birthDateInput));
   form.querySelector('[name="name"]').addEventListener("input", (event) => clearError(event.target));
   privacyInput.addEventListener("change", () => form.querySelector(".agreement-error").textContent = "");
 
@@ -128,14 +133,18 @@
     let valid = true;
     const name = form.elements.name;
     const digits = phoneInput.value.replace(/\D/g, "");
+    const birthDate = birthDateInput.value;
     const debtStatus = selectedDebtStatus();
     clearError(name);
     clearError(phoneInput);
+    clearError(birthDateInput);
     eligibilityError.textContent = "";
     form.querySelector(".agreement-error").textContent = "";
     if (name.value.trim().length < 2) { setError(name, "이름을 2자 이상 입력해 주세요."); valid = false; }
     const phoneError = getPhoneError(digits);
     if (phoneError) { setError(phoneInput, phoneError); valid = false; }
+    if (!birthDate) { setError(birthDateInput, "생년월일을 선택해 주세요."); valid = false; }
+    else if (birthDate > localToday) { setError(birthDateInput, "미래 날짜는 생년월일로 입력할 수 없습니다."); valid = false; }
     if (!debtStatus) { eligibilityError.textContent = "예 또는 아니요를 선택해 주세요."; valid = false; }
     if (debtStatus === "예") { eligibilityBlock.hidden = false; submitButton.disabled = true; valid = false; }
     if (!privacyInput.checked) { form.querySelector(".agreement-error").textContent = "개인정보 수집 및 이용 동의가 필요합니다."; valid = false; }
