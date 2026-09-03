@@ -176,6 +176,9 @@
     try {
       const response = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload) });
       if (!response.ok) throw Error();
+      if (typeof fbq === "function") {
+  fbq("track", "Lead");
+}
       statusBox.hidden = false;
       statusBox.innerHTML = "<b>상담 신청이 완료되었습니다.</b><br>확인 후 입력하신 연락처로 안내드리겠습니다.";
       form.reset();
