@@ -10,8 +10,8 @@
     <meta property="og:description" content="차량 선택부터 이용 조건까지, 하이바이카가 한 번에 확인해 드립니다." />
     <meta property="og:image" content="./Hybicar-og.png" />
     <title>하이바이카 | 중고차·리스 맞춤 상담</title>
-    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css?v=20260903" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=20260907" />
     <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -25,13 +25,11 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1644306233974529');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
-/></noscript>
 <!-- End Meta Pixel Code -->
   </head>
   <body>
-    <a class="skip-link" href="#consult">상담 신청으로 바로가기</a>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1" alt="" /></noscript>
+    <a class="skip-link" href="#quick-consult">상담 신청으로 바로가기</a>
     <header class="site-header" id="top">
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="하이바이카 홈">
@@ -40,9 +38,9 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
         </a>
         <nav class="desktop-nav" aria-label="주요 메뉴">
           <a href="#process">진행 절차</a>
-          <a href="#consult">상담 신청</a>
+          <a href="#quick-consult">상담 신청</a>
         </nav>
-        <a class="header-cta" href="#consult">무료 상담 신청</a>
+        <a class="header-cta" href="#quick-consult">무료 상담 신청</a>
       </div>
     </header>
 
@@ -56,7 +54,7 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
             <h1 id="hero-title">복잡한 조건<br />비교는 그만.<br /><em>내 조건에 맞는 차</em>를<br />찾아드립니다.</h1>
             <p class="hero-lead">원하는 차량과 이용 조건을 알려주세요. 하이바이카가 차량 선택부터 금융 조건까지 한 번에 확인해 드립니다.</p>
             <div class="hero-actions">
-              <a class="button button--primary" href="#consult">1분 무료 상담 신청 <span aria-hidden="true">→</span></a>
+              <a class="button button--primary" href="#quick-consult">1분 무료 상담 신청 <span aria-hidden="true">→</span></a>
               <a class="text-link" href="#process">상담 절차 보기</a>
             </div>
             <ul class="hero-points" aria-label="상담 특징">
@@ -66,6 +64,42 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
             </ul>
           </div>
 
+          <form class="consult-form consult-form--hero" id="quick-consult" novalidate aria-label="상단 무료 상담 신청" data-endpoint="https://hook.us2.make.com/ngxustw596wnb30s4f4y51jorxh2x9bm">
+            <input type="hidden" name="form_location" value="top" />
+            <div class="form-head"><span>빠른 무료 상담</span><strong><em>1분</em>이면 충분해요</strong></div>
+            <div class="form-grid">
+              <label class="field"><span>이름 <b>*</b></span><input type="text" name="name" autocomplete="name" placeholder="이름을 입력해 주세요" required maxlength="20" /><small class="error-message"></small></label>
+              <label class="field"><span>연락처 <b>*</b></span><input type="tel" name="phone" autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000" required minlength="13" maxlength="13" pattern="010-[0-9]{4}-[0-9]{4}" aria-describedby="phone-error-top" /><small class="error-message" id="phone-error-top" aria-live="polite"></small></label>
+              <label class="field"><span>생년월일 8자리 <b>*</b></span><input type="text" name="birth_date" autocomplete="bday" inputmode="numeric" placeholder="예: 19900101" required minlength="8" maxlength="8" pattern="[0-9]{8}" aria-describedby="birth-date-error-top" /><small class="error-message" id="birth-date-error-top" aria-live="polite"></small></label>
+              <label class="field"><span>희망 차량</span><input type="text" name="vehicle" placeholder="예: 쏘렌토, BMW 5시리즈" maxlength="40" /></label>
+              <label class="field"><span>거주 지역</span><select name="region"><option value="">지역을 선택해 주세요</option><option>서울</option><option>경기</option><option>인천</option><option>부산</option><option>대구</option><option>광주</option><option>대전</option><option>울산</option><option>세종</option><option>강원</option><option>충북</option><option>충남</option><option>전북</option><option>전남</option><option>경북</option><option>경남</option><option>제주</option></select></label>
+            </div>
+            <fieldset class="eligibility-field">
+              <legend>현재 연체 중이거나 채무 불이행 상태인가요? <b>*</b></legend>
+              <div class="radio-group">
+                <label class="radio-option radio-option--yes"><input type="radio" name="debt_status" value="예" required /><span>예</span></label>
+                <label class="radio-option"><input type="radio" name="debt_status" value="아니요" required /><span>아니요</span></label>
+              </div>
+              <p class="eligibility-error" aria-live="polite"></p>
+              <p class="eligibility-block" role="alert" hidden><strong>현재는 상담 신청이 어렵습니다.</strong><br />연체 또는 채무 불이행 상태가 해소된 후 다시 신청해 주세요.</p>
+            </fieldset>
+            <div class="agreements">
+              <label class="check-row"><input type="checkbox" name="privacy_agreed" required /><span class="custom-check" aria-hidden="true"></span><span><b>[필수]</b> 개인정보 수집 및 이용에 동의합니다.</span><button type="button" class="terms-toggle" aria-expanded="false" aria-controls="privacy-detail-top">보기</button></label>
+              <div class="terms-detail" id="privacy-detail-top" hidden><p><b>수집 항목</b> 이름, 연락처, 생년월일, 희망 차량, 거주 지역, 연체·채무 불이행 여부</p><p><b>이용 목적</b> 중고차·리스 상담, 차량 및 금융 조건 안내</p><p><b>보유 기간</b> 상담 종료 후 3개월 또는 관계 법령에 따른 기간</p><p>동의를 거부할 수 있으나, 거부 시 상담 신청이 제한됩니다.</p></div>
+              <small class="agreement-error" aria-live="polite"></small>
+            </div>
+            <button class="submit-button" type="submit"><span class="submit-label">무료 상담 신청하기</span><span class="submit-loading" hidden>접수 중…</span></button>
+            <p class="form-caption">신청 전 아래 유의사항과 개인정보 처리 내용을 확인해 주세요.</p>
+            <div class="form-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden></div>
+          </form>
+        </div>
+
+        <div class="container hero-showcase">
+          <div class="hero-showcase-copy">
+            <p class="section-kicker">POPULAR VEHICLES</p>
+            <h2>어떤 차를 고를지<br />정하지 못해도 괜찮아요.</h2>
+            <p>많이 찾는 차량부터 내 조건에 맞는 선택지까지 함께 비교해 드립니다.</p>
+          </div>
           <div class="hero-carousel" aria-roledescription="carousel" aria-label="하이바이카 차량 안내 슬라이드">
             <div class="carousel-viewport">
               <div class="carousel-track">
@@ -74,10 +108,13 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
                 <figure class="carousel-slide" data-slide aria-hidden="true"><img src="./car-sorento.jpg" alt="쏘렌토 차량 안내" width="900" height="900" loading="lazy" /></figure>
                 <figure class="carousel-slide" data-slide aria-hidden="true"><img src="./car-casper.jpg" alt="캐스퍼 차량 안내" width="900" height="900" loading="lazy" /></figure>
                 <figure class="carousel-slide" data-slide aria-hidden="true"><img src="./car-porter.jpg" alt="포터 차량 안내" width="900" height="900" loading="lazy" /></figure>
+                <figure class="carousel-slide" data-slide aria-hidden="true"><img src="./car-tucson.png" alt="투싼 차량 안내" width="1254" height="1254" loading="lazy" /></figure>
+                <figure class="carousel-slide" data-slide aria-hidden="true"><img src="./car-sportage.png" alt="스포티지 차량 안내" width="1080" height="1080" loading="lazy" /></figure>
+                <figure class="carousel-slide" data-slide aria-hidden="true"><img src="./car-carnival.png" alt="카니발 차량 안내" width="1080" height="1080" loading="lazy" /></figure>
               </div>
               <button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="이전 차량 보기">‹</button>
               <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="다음 차량 보기">›</button>
-              <div class="carousel-count" aria-live="polite"><b>1</b><span>/</span>5</div>
+              <div class="carousel-count" aria-live="polite"><b>1</b><span>/</span>8</div>
             </div>
             <div class="carousel-dots" role="tablist" aria-label="슬라이드 선택">
               <button class="is-active" type="button" role="tab" aria-selected="true" aria-label="첫 번째 차량 보기" data-index="0"></button>
@@ -85,6 +122,9 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
               <button type="button" role="tab" aria-selected="false" aria-label="세 번째 차량 보기" data-index="2"></button>
               <button type="button" role="tab" aria-selected="false" aria-label="네 번째 차량 보기" data-index="3"></button>
               <button type="button" role="tab" aria-selected="false" aria-label="다섯 번째 차량 보기" data-index="4"></button>
+              <button type="button" role="tab" aria-selected="false" aria-label="여섯 번째 차량 보기" data-index="5"></button>
+              <button type="button" role="tab" aria-selected="false" aria-label="일곱 번째 차량 보기" data-index="6"></button>
+              <button type="button" role="tab" aria-selected="false" aria-label="여덟 번째 차량 보기" data-index="7"></button>
             </div>
           </div>
         </div>
@@ -125,12 +165,13 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
             </div>
           </div>
 
-          <form class="consult-form" id="lead-form" novalidate data-endpoint="https://hook.us2.make.com/ngxustw596wnb30s4f4y51jorxh2x9bm">
+          <form class="consult-form" id="lead-form" novalidate aria-label="하단 무료 상담 신청" data-endpoint="https://hook.us2.make.com/ngxustw596wnb30s4f4y51jorxh2x9bm">
+            <input type="hidden" name="form_location" value="bottom" />
             <div class="form-head"><span>무료 상담 신청</span><strong><em>1분</em>이면 충분해요</strong></div>
             <div class="form-grid">
               <label class="field"><span>이름 <b>*</b></span><input type="text" name="name" autocomplete="name" placeholder="이름을 입력해 주세요" required maxlength="20" /><small class="error-message"></small></label>
-              <label class="field"><span>연락처 <b>*</b></span><input type="tel" name="phone" autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000" required minlength="13" maxlength="13" pattern="010-[0-9]{4}-[0-9]{4}" aria-describedby="phone-error" /><small class="error-message" id="phone-error" aria-live="polite"></small></label>
-              <label class="field"><span>생년월일 <b>*</b></span><input type="date" name="birth_date" autocomplete="bday" required aria-describedby="birth-date-error" /><small class="error-message" id="birth-date-error" aria-live="polite"></small></label>
+              <label class="field"><span>연락처 <b>*</b></span><input type="tel" name="phone" autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000" required minlength="13" maxlength="13" pattern="010-[0-9]{4}-[0-9]{4}" aria-describedby="phone-error-bottom" /><small class="error-message" id="phone-error-bottom" aria-live="polite"></small></label>
+              <label class="field"><span>생년월일 8자리 <b>*</b></span><input type="text" name="birth_date" autocomplete="bday" inputmode="numeric" placeholder="예: 19900101" required minlength="8" maxlength="8" pattern="[0-9]{8}" aria-describedby="birth-date-error-bottom" /><small class="error-message" id="birth-date-error-bottom" aria-live="polite"></small></label>
               <label class="field"><span>희망 차량</span><input type="text" name="vehicle" placeholder="예: 쏘렌토, BMW 5시리즈" maxlength="40" /></label>
               <label class="field"><span>거주 지역</span><select name="region"><option value="">지역을 선택해 주세요</option><option>서울</option><option>경기</option><option>인천</option><option>부산</option><option>대구</option><option>광주</option><option>대전</option><option>울산</option><option>세종</option><option>강원</option><option>충북</option><option>충남</option><option>전북</option><option>전남</option><option>경북</option><option>경남</option><option>제주</option></select></label>
             </div>
@@ -144,13 +185,13 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
               <p class="eligibility-block" role="alert" hidden><strong>현재는 상담 신청이 어렵습니다.</strong><br />연체 또는 채무 불이행 상태가 해소된 후 다시 신청해 주세요.</p>
             </fieldset>
             <div class="agreements">
-              <label class="check-row"><input type="checkbox" name="privacy_agreed" required /><span class="custom-check" aria-hidden="true"></span><span><b>[필수]</b> 개인정보 수집 및 이용에 동의합니다.</span><button type="button" class="terms-toggle" aria-expanded="false" aria-controls="privacy-detail">보기</button></label>
-              <div class="terms-detail" id="privacy-detail" hidden><p><b>수집 항목</b> 이름, 연락처, 생년월일, 희망 차량, 거주 지역, 연체·채무 불이행 여부</p><p><b>이용 목적</b> 중고차·리스 상담, 차량 및 금융 조건 안내</p><p><b>보유 기간</b> 상담 종료 후 3개월 또는 관계 법령에 따른 기간</p><p>동의를 거부할 수 있으나, 거부 시 상담 신청이 제한됩니다.</p></div>
+              <label class="check-row"><input type="checkbox" name="privacy_agreed" required /><span class="custom-check" aria-hidden="true"></span><span><b>[필수]</b> 개인정보 수집 및 이용에 동의합니다.</span><button type="button" class="terms-toggle" aria-expanded="false" aria-controls="privacy-detail-bottom">보기</button></label>
+              <div class="terms-detail" id="privacy-detail-bottom" hidden><p><b>수집 항목</b> 이름, 연락처, 생년월일, 희망 차량, 거주 지역, 연체·채무 불이행 여부</p><p><b>이용 목적</b> 중고차·리스 상담, 차량 및 금융 조건 안내</p><p><b>보유 기간</b> 상담 종료 후 3개월 또는 관계 법령에 따른 기간</p><p>동의를 거부할 수 있으나, 거부 시 상담 신청이 제한됩니다.</p></div>
               <small class="agreement-error" aria-live="polite"></small>
             </div>
             <button class="submit-button" type="submit"><span class="submit-label">무료 상담 신청하기</span><span class="submit-loading" hidden>접수 중…</span></button>
             <p class="form-caption">신청 전 아래 유의사항과 개인정보 처리 내용을 확인해 주세요.</p>
-            <div class="form-status" role="status" aria-live="polite" hidden></div>
+            <div class="form-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden></div>
           </form>
         </div>
       </section>
@@ -175,6 +216,6 @@ src="https://www.facebook.com/tr?id=1644306233974529&ev=PageView&noscript=1"
     </footer>
     <a class="mobile-sticky" href="#consult">무료 상담 신청 <span>→</span></a>
     <button class="to-top" type="button" aria-label="맨 위로 이동">↑</button>
-    <script src="./script.js?v=20260902-2"></script>
+    <script type="module" src="./script.js?v=20260907"></script>
   </body>
 </html>
